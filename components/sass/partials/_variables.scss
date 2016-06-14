@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Montserrat-Light';
+	src: url('../fonts/Montserrat-Light.otf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('../fonts/Montserrat-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Montserrat-SemiBold';
+	src: url('../fonts/Montserrat-SemiBold.otf');
+}
+
+$heading-font: 'Montserrat-SemiBold', serif; 
+$subHeading-font: 'Montserrat-Regular', serif;
+$body-font: 'Montserrat-Light', monospace, serif;
+
+
+$font-color: #fff;//white
+$hover-color: #673e7d; //purpule
+
+

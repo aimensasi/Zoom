@@ -1,0 +1,150 @@
+*{
+	outline: 0 !important;
+}
+
+body{
+	font-family: $subHeading-font;
+	font-size: 1rem;
+	//color: $font-color;
+}
+
+a{
+	color: #fff;
+}
+
+//setting up heading size
+$i: 2.1rem;
+@for $item from 1 through 6{
+
+	h#{$item}{
+		font-size: $i;
+		font-family: $heading-font;
+	}
+
+	$i: $i - 0.2rem;
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.navbar{
+		display: flex;
+		margin-bottom: 50px;
+		.navbar-brand{
+			margin-right: auto;
+		}
+		.nav-link{
+			font-family: $body-font;
+			&:hover{
+				color: $hover-color;
+			}
+		}
+
+
+	}
+
+.title{
+			color: $font-color;
+			font-family: $subHeading-font;
+			margin-bottom: 2rem;
+	}
+
+.header-1{
+	@include bgImage('../images/bg.png', 100%, 700px);
+
+	.header-content{
+		
+		.leads{
+			color: $font-color;
+			font-family: $body-font;
+			font-size: 1.2rem;
+			margin-bottom: 4rem;
+		}
+		.btn{
+			height: 50px;
+			width: 245px;
+			border-radius: 70px;
+			font-size: 1.1rem;
+			transition: background .5s ease, color .3s ease;
+		}
+		.btn-secondary-outline{
+			border-width: 2px;
+			margin-left: .8rem;
+			&:hover{
+				background-color: rgba(225,225,225, .2);
+				border-color: transparent;
+			}
+			img{
+				margin-right: 1rem;
+			}
+		}
+		.btn-secondary:hover{
+			background-color: $hover-color;
+			color: #fff;
+			border: none;
+		}
+	}
+
+}
+
+.header-2{
+	height:810px;
+	@include bgImage('../images/bg_2.png', 100%, 700px);
+	.header-content{
+		.title{
+			margin-top: 15rem;
+		}
+	}
+}
+
+.header-3{
+	height:810px;
+	@include bgImage('../images/bg_3.png');
+	.header-content{
+		.title{
+			margin-top: 8rem;
+		}
+		.vr-iphone{
+			margin: 3rem 0;
+		}
+	}
+}
+
+.header-2, .header-3 {
+
+	.header-content{
+
+		.btn{
+			width:220px;
+			height: 70px;
+			position: relative;
+			background-color: #fff;
+			img{
+				position: absolute;
+				left: 15px;
+			}
+			h6{
+				display: inline-block;
+				color: #585b60;;
+				font-size: .9rem;
+				margin-left: 40px;
+				padding-left: 18px;
+				margin-top: .4rem;
+				border-left: thin solid #9da6ac;
+				span{
+					font-size:1.2rem;
+				}
+			}
+		}
+		.btn-win{
+			margin-left: 1rem;
+			img{
+				top: 15px;
+			}
+		}
+	}
+}
+
+
+

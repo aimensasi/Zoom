@@ -33,7 +33,7 @@ var jsSrc,
 
     jsSrc = 'components/scripts/*.js';
     sassStyleSrc = 'components/sass/style.scss';
-    allSassSrc = 'components/sass/*.scss';
+    allSassSrc = 'components/sass/**/*.scss';
     htmlsrc = 'builds/development/*.html'
     imgSrc = 'builds/development/images/*.*';
 
@@ -55,7 +55,7 @@ gulp.task('compass', function(){
 
         }))
         .on('error', gUtil.log)
-        .pipe(gulp.dest('builds/developmen/css'))
+        .pipe(gulp.dest(outputDir + '/css'))
         .pipe(connect.reload())
 });
 

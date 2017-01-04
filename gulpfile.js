@@ -17,6 +17,7 @@ var jsSrc,
     jsonSrc,
     env,
     outputDir,
+    sassconfig,
     outputStyle,
     htmlsrc,
     imgSrc;
@@ -25,10 +26,12 @@ var jsSrc,
 
     if(env === 'development'){
         outputDir = 'builds/development';
+        sassconfig = 'outputStyle';
         outputStyle = 'expanded';
     }else{
         outputDir = 'builds/productions';
-        outputStyle = 'compressed';
+        sassconfig = 'config_file';
+        outputStyle = 'config.rb';
     }
 
     jsSrc = 'components/scripts/*.js';
@@ -51,7 +54,7 @@ gulp.task('compass', function(){
         .pipe(compass({
             sass: 'components/sass',
             image: outputDir +  '/images',
-            outputStyle: outputStyle
+            sassconfig: outputStyle
 
         }))
         .on('error', gUtil.log)
@@ -83,6 +86,7 @@ gulp.task('images', function(){
         .pipe(gulpIf(env === 'production', gulp.dest(outputDir + '/images')))
         .pipe(connect.reload())
 });
+
 
 gulp.task('watch', function(){
     gulp.watch(jsSrc, ['js']);

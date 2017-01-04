@@ -5,4 +5,4 @@
 ####  Trying out sass
 
 
-Site UrlL:  zoom-salted.s3-website-ap-southeast-1.amazonaws.com
+Site UrlL:  http://zoom-salted.s3-website-ap-southeast-1.amazonaws.com/
